@@ -1,0 +1,46 @@
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+
+body{
+    background-color:cornflowerblue;
+    margin: 0;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8.5%;
+   
+}
+
+.piano{
+    display: flex;
+}
+
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+}
+.white.active{
+    background-color: #ccc;
+
+}
+
+.black.active{
+    background-color: #333;
+}
+
+.white{
+    --width: 100px;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.black{
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+   
+}
