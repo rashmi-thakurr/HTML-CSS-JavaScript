@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Images From Internet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="default_img.jpg" alt="img" id="image" />
+            <div class="content">
+                <p id="title"><i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Download Images</p>
+                <div class="input_box">
+                    <i class="fa fa-link" aria-hidden="true" id="link_icon"></i>
+                    <input type="text" placeholder="Enter Image Link" id="link">
+                    <button onclick="clearField()" id="clearInputField"><i class="fa fa-times" aria-hidden="true"
+                           ></i></button>
+                    <button onclick="setImage()" id="setImage_Btn"><i class="fa fa-search" aria-hidden="true"
+                            ></i></button>
+                </div>
+
+                <button onclick="Download_Btn()" id="download_btn"><i class="fa fa-paper-plane" aria-hidden="true"
+                        ></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="FileSaver.js"></script>
+    <script src="script.js"></script>
+
+</html>
