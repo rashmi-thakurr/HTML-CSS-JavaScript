@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../CSS/projects.css">
+</head>
+<body>
+    <section id="header" >
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hello" style="text-decoration: none;"><h2 style="color: #fff;"><span style="color: tomato;">R</span>ASHMI <span style="color: tomato;">T</span>HAKUR</h2></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                            <ul>
+                                <li><a href="https://rashmi-thakurr.github.io/Download-Images/" data-after="IMAGE">IMAGE DOWNLOADER</a></li>
+                                <li><a href="https://rashmi-thakurr.github.io/Music-Player/" data-after="MUSIC">MUSIC PLAYER</a></li>
+                                <li><a href="https://rashmi-thakurr.github.io/Number-Game/" data-after="GAME">NUMBER GAME</a></li>
+                                <li><a href="https://rashmi-thakurr.github.io/TwitterClone/" data-after="CLONE">TWITTER CLONE</a></li>
+                                <li><a href="https://rashmi-thakurr.github.io/Virtual%20Piano/index.html" data-after="PAINO">VIRTUAL PIANO</a></li>
+                            </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--end-of-header-->
+    <div class="note" style="position:absolute; top: 15%; left: 33%; font-size: 0.9rem; text-align: center; ">
+        <h2 style="color: #fff; opacity: 1;">Click On the Image to view the corresponding Project</h2>
+    </div>
+    <div class="box">
+        <span style="--i:1"><a href="https://rashmi-thakurr.github.io/Download-Images/"><img src="../Images/image-downloader.jpg"></a></span>
+        <span style="--i:2"><a href="https://rashmi-thakurr.github.io/Music-Player/"><img src="../Images/music-player.png"></a></span>
+        <span style="--i:3"><a href="https://rashmi-thakurr.github.io/Music-Player/"><img src="../Images/video-player.png"></a></span>
+        <span style="--i:4"><a href="https://rashmi-thakurr.github.io/Number-Game/"><img src="../Images/Number-Game.jpg"></a></span>
+        <span style="--i:5"><a href="https://rashmi-thakurr.github.io/TwitterClone/"><img src="../Images/twitter.png"></a></span>
+        <span style="--i:6"><a href="https://rashmi-thakurr.github.io/Virtual%20Piano/index.html"></a><img src="../Images/piano.jpg"></a></span>
+    </div>
+    <script>
+         const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+        const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+        const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+        const header = document.querySelector('.header.container');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobile_menu.classList.toggle('active');
+        });
+
+        document.addEventListener('scroll', () => {
+            var scroll_position = window.scrollY;
+            if (scroll_position > 250) {
+                header.style.backgroundColor = '#29323c';
+            } else {
+                header.style.backgroundColor = 'transparent';
+            }
+        });
+
+        menu_item.forEach((item) => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobile_menu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
